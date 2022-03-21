@@ -1,4 +1,4 @@
-# FirstAngularApp
+# Recipe App
 <hr>
 
-#Recipe App
+Created with Bootstrap
