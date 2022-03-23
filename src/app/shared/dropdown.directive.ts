@@ -1,12 +1,12 @@
-import { Directive, OnInit, ElementRef, Renderer2 } from '@angular/core';
+import { Directive, HostListener, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[appDropdown]',
 })
 export class DropdownDirective {
-  constructor(private elRef: ElementRef, private renderer: Renderer2) {}
+  @HostBinding('class.open') isOpen = false;
 
-  ngOnInit() {
-    this.renderer.setStyle('elRef', 'backgroundColor', 'red');
+  @HostListener('click') toggleOpen() {
+    this.isOpen = !this.isOpen;
   }
 }
